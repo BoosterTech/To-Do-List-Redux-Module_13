@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Tasks from "./features/tasks/Tasks";
-import reportWebVitals from "./reportWebVitals";
+import App from "./features/tasks/Tasks";
+import reportWebVitals from "./App.js";
 import { theme } from "./theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Tasks/>
+      <App/>
     </ThemeProvider>
   </React.StrictMode>
 );

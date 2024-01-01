@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Form from "./Form";
-import Tasks from "./Tasks";
-import Buttons from "./Buttons";
-import Section from "./Section";
-import Header from "./Header";
+import Form from "./features/tasks/Form"
+import TaskList from "./features/tasks/TaskList"
+import Buttons from "./features/tasks/Buttons";
+import Section from "./common/Section";
+import Header from "./common/Header";
 import { useTasks } from "./useTasks";
-import { MainWrapper } from "./MainWrapper/styled";
+import { MainWrapper } from "./common/MainWrapper/styled";
 
 function App() {
   const [hideDoneTasks, setHideDoneTasks] = useState(false);
@@ -35,7 +35,7 @@ function App() {
           />
         }
         bodyContent={
-          <Tasks
+          <TaskList
             tasks={tasks}
             hideDoneTasks={hideDoneTasks}
             removeTask={removeTask}

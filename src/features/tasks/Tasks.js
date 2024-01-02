@@ -1,20 +1,17 @@
-import React, { useState } from "react";
-import Form from "./Form"
-import TaskList from "./TaskList"
+import { useSelector } from "react-redux";
+import Form from "./Form";
+import TaskList from "./TaskList";
 import Buttons from "./Buttons";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 import { useTasks } from "../../useTasks";
 import { MainWrapper } from "../../common/MainWrapper/styled";
+import { selectTasks } from "./tasksSlice";
 
 function Tasks() {
-  const [hideDoneTasks, setHideDoneTasks] = useState(false);
+  const tasks = useSelector(selectTasks);
 
-  const toggleHideDone = () =>
-    setHideDoneTasks((hideDoneTasks) => !hideDoneTasks);
-
-  const { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask } =
-    useTasks();
+  const { removeTask, toggleTaskDone, setAllDone, addNewTask } = useTasks();
 
   return (
     <MainWrapper>
@@ -26,18 +23,10 @@ function Tasks() {
       />
       <Section
         title="Lista zadań"
-        extraHeaderContent={
-          <Buttons
-            tasks={tasks}
-            hideDoneTasks={hideDoneTasks}
-            toggleHideDone={toggleHideDone}
-            setAllDone={setAllDone}
-          />
-        }
+        extraHeaderContent={<Buttons tasks={tasks} setAllDone={setAllDone} />}
         bodyContent={
           <TaskList
             tasks={tasks}
-            hideDoneTasks={hideDoneTasks}
             removeTask={removeTask}
             toggleTaskDone={toggleTaskDone}
           />

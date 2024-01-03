@@ -11,26 +11,20 @@ import { selectTasks } from "./tasksSlice";
 function Tasks() {
   const tasks = useSelector(selectTasks);
 
-  const { removeTask, toggleTaskDone, setAllDone, addNewTask } = useTasks();
+  const { removeTask, setAllDone } = useTasks();
 
   return (
     <MainWrapper>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        bodyContent={<Form addNewTask={addNewTask} />}
+        bodyContent={<Form />}
         headerType="section__headerTop"
       />
       <Section
         title="Lista zadań"
-        extraHeaderContent={<Buttons tasks={tasks} setAllDone={setAllDone} />}
-        bodyContent={
-          <TaskList
-            tasks={tasks}
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
-          />
-        }
+        extraHeaderContent={<Buttons />}
+        bodyContent={<TaskList />}
         id="section__flex"
         headerType="section__header"
       />

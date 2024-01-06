@@ -27,7 +27,6 @@ const Form = ({ addNewTask }) => {
         id: nanoid(),
       })
     );
-    // addNewTask(newTaskContent.trim());
     setNewTaskContent("");
     focusInput();
   };

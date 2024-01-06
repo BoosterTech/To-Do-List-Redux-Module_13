@@ -2,7 +2,7 @@
   "name": "todo-list-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://boostertech.github.io/to-do-list-react-styled-comp/",
+  "homepage": "https://boostertech.github.io/To-Do-List-Redux-Module_13/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "@testing-library/jest-dom": "^5.17.0",

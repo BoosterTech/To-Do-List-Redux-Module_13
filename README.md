@@ -3,7 +3,7 @@
 ## Technologies used:
 - HTML, CSS, JavaScript
 - React-Redux
-- Styled components
+- Styled Components
 
 ### Demo: https://boostertech.github.io/TODO-List-React/
 Wide screen:

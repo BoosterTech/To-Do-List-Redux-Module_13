@@ -15,9 +15,9 @@ export const SectionContainer = styled.div`
       display: flex;
       flex-direction: row;
 
-      @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-      flex-direction: column;
-      } 
+      @media (max-width: 745px) {
+       flex-direction: column;
+      }
     `}
 `;
 
@@ -36,5 +36,9 @@ export const Header = styled.h2`
       padding: 15px;
       font-weight: bold;
       font-size: large;
+
+      @media (max-width: 745px) {
+       text-align: center;
+      }
     `}
 `;

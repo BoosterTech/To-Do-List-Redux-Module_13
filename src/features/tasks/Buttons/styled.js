@@ -8,7 +8,7 @@ export const ButtonsWrapper = styled.span`
   justify-content: flex-end;
   margin-right: 15px;
 
-  @media (max-width: 745px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     flex-direction: column;
     margin-right: 0;
     margin-bottom: 10px;
